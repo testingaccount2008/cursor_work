@@ -17,6 +17,7 @@
 /*  variables  */
 :root {
     --bg-color: #13120b;
+    --secondary-bg-color: #1b1913;
     --font-color: #ffff;
     --font-primary: 'CursorGothic';
     --border-default: 0.5px solid gray;
@@ -132,3 +133,32 @@ nav a {
     fill: none;
     display: block;
 }
+
+/*Trusted Section*/
+.trusted-section {
+    margin-top: 10vh;
+    font-size: 14px;
+    letter-spacing: 0.0125;
+}
+
+.trusted-text {
+    text-align: center;
+}
+
+.trusted-container {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 7px;
+    width: 160px;
+    height: 100px;
+    background-color: var(--secondary-bg-color);
+}
+
