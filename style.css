@@ -1,0 +1,71 @@
+@font-face {
+    font-family: 'CursorGothicRegular';
+    src: url('Assets/fonts/CursorGothic_Regular-s.p.a361088d.woff2');
+}
+
+:root {
+    --bg-color: #1b1913;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: var(--bg-color);
+}
+
+nav {
+    padding: 7px 5vw;
+    font-family: 'CursorGothicRegular';
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.logo img {
+    width: 100px;
+    cursor: pointer;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+}
+
+.center-anchor {
+    display: flex;
+    gap: 25px;
+}
+
+.center-anchor a:hover {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.right-anchor {
+    display: flex;
+    gap: 10px;
+}
+
+.right-anchor a:first-child {
+    border: 0.5px solid gray;
+    border-radius: 20px;
+    padding: 5px 10px;
+}
+
+.right-anchor a:first-child:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.right-anchor a:last-child {
+    background-color: #ffff;
+    color: #111111;
+    border: 0.5px solid gray;
+    border-radius: 20px;
+    padding: 5px 10px;
+}
+
+.right-anchor a:last-child:hover {
+    background-color: rgba(255, 255, 255, 0.9);
+}
