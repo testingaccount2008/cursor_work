@@ -19,6 +19,7 @@
     --bg-color: #13120b;
     --secondary-bg-color: #1b1913;
     --font-color: #ffff;
+    --secondary-font-color: #f54e00;
     --font-primary: 'CursorGothic';
     --border-default: 0.5px solid gray;
 }
@@ -35,21 +36,29 @@ body {
     background-color: var(--bg-color);
     font-family: var(--font-primary);
     color: var(--font-color);
+    
 }
-
+body a{
+    text-decoration: none;
+    color: inherit;
+}
 /*Navigation*/
 nav {
+    position: sticky;
+    top: 0px;
+    z-index: 1000;
+    background-color: var(--bg-color);
+}
+.nav-contianer{
     display: flex;
+    height: 50px;
     justify-content: space-between;
     align-items: center;
     font-size: 14px;
     font-weight: 400;
 }
 
-nav a {
-    text-decoration: none;
-    color: inherit;
-}
+
 
 .logo img {
     width: 100px;
@@ -162,3 +171,48 @@ nav a {
     background-color: var(--secondary-bg-color);
 }
 
+/* agent section */
+.agent-section {
+    margin-top: 10vh;
+    font-size: 14px;
+    letter-spacing: 0.0125;
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+}
+
+.agent-container {
+    background-color: var(--secondary-bg-color);
+    padding: 15px ;
+    height: 90vh;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.agent-container.reverse {
+    flex-direction: row-reverse;
+}
+
+.agent-image img {
+    border-radius: 5px;
+    height: 85vh;
+}
+.agent-text{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.agent-text p {
+    width: 400px;
+    line-height: 1.5;
+    letter-spacing: 1.3px;
+    font-size: 19px;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.learn-more {
+    color: var(--secondary-font-color);
+}
