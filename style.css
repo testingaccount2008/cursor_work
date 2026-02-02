@@ -1,22 +1,43 @@
+/*personal Font */
 @font-face {
-    font-family: 'CursorGothicRegular';
-    src: url('Assets/fonts/CursorGothic_Regular-s.p.a361088d.woff2');
+    font-family: 'CursorGothic';
+    src: url('Assets/fonts/CursorGothic_Regular-s.p.a361088d.woff2') format('woff2');
+    font-display: swap;
+    font-weight: 400;
+    font-style: normal;
 }
 
+@font-face {
+    font-family: 'CursorGothic';
+    src: url('https://cursor.com/marketing-static/_next/static/media/CursorGothic_Light-s.p.a361088d.woff2') format('woff2');
+    font-weight: 300;
+    font-style: normal;
+}
+
+/*  variables  */
 :root {
-    --bg-color: #1b1913;
+    --bg-color: #13120b;
+    --font-color: #ffff;
+    --font-primary: 'CursorGothic';
+    --border-default: 0.5px solid gray;
 }
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-color: var(--bg-color);
 }
 
-nav {
+
+body {
     padding: 7px 5vw;
-    font-family: 'CursorGothicRegular';
+    background-color: var(--bg-color);
+    font-family: var(--font-primary);
+    color: var(--font-color);
+}
+
+/*Navigation*/
+nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -24,18 +45,22 @@ nav {
     font-weight: 400;
 }
 
+nav a {
+    text-decoration: none;
+    color: inherit;
+}
+
 .logo img {
     width: 100px;
     cursor: pointer;
 }
 
-nav a {
-    text-decoration: none;
-    color: white;
+.center-anchor,
+.right-anchor {
+    display: flex;
 }
 
 .center-anchor {
-    display: flex;
     gap: 25px;
 }
 
@@ -44,14 +69,13 @@ nav a {
 }
 
 .right-anchor {
-    display: flex;
     gap: 10px;
 }
 
-.right-anchor a:first-child {
-    border: 0.5px solid gray;
+.right-anchor a {
     border-radius: 20px;
     padding: 5px 10px;
+    border: var(--border-default);
 }
 
 .right-anchor a:first-child:hover {
@@ -61,11 +85,50 @@ nav a {
 .right-anchor a:last-child {
     background-color: #ffff;
     color: #111111;
-    border: 0.5px solid gray;
-    border-radius: 20px;
-    padding: 5px 10px;
 }
 
 .right-anchor a:last-child:hover {
     background-color: rgba(255, 255, 255, 0.9);
+}
+
+/*hero*/
+.hero-section {
+    margin-top: 15vh;
+    font-size: 14px;
+    letter-spacing: 0.0125;
+}
+
+.hero-image img {
+    margin-top: 7vh;
+    width: 1300px;
+    border-radius: 10px;
+}
+
+/*Download Button   */
+.download button {
+    cursor: pointer;
+    margin-top: 20px;
+    padding: 11px 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    font-size: 18px;
+    border-radius: 30px;
+    border: var(--border-default);
+    background-color: var(--font-color);
+    color: var(--bg-color);
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.download button:hover {
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+.download button svg {
+    width: 16px;
+    height: 16px;
+    stroke: currentColor;
+    fill: none;
+    display: block;
 }
