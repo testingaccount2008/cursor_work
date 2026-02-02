@@ -216,3 +216,66 @@ nav {
 .learn-more {
     color: var(--secondary-font-color);
 }
+
+/* testimonials */
+.testimonials{
+    margin-bottom: 20vh;
+}
+.testimonials-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.testimonials h1 {
+    padding: 15vh 0 8vh;
+    text-align: center;
+}
+
+.testimonial-box {
+    width: 430px;
+    height: 280px;
+    padding: 14px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* 🔥 key */
+    gap: 20px;
+    background-color: var(--secondary-bg-color);
+    border-radius: 5px;
+}
+
+.details {
+    font-weight: 400;
+    line-height: 1.5;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.testimonial-author {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.testimonial-author img {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+}
+
+.author-info {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.author-info p {
+    font-size: 14px;
+}
+
+.author-info p:first-child {
+    font-size: 16px;
+    color: var(--font-color);
+}
+
+.author-info p:last-child {
+    color: rgba(255, 255, 255, 0.7);
+}
